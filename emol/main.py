@@ -34,7 +34,7 @@ if r.status_code == 200:
         r.raw.decode_content = True
         shutil.copyfileobj(r.raw, f)
 
-with open("mails.txt") as f:
+with open(path + "\\mails.txt") as f:
     lista = [m.strip() for m in f.readlines()]
 
 for mail in lista:
