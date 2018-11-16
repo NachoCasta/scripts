@@ -32,6 +32,10 @@ if r.status_code == 200:
         r.raw.decode_content = True
         shutil.copyfileobj(r.raw, f)
 
-enviar_mail("icastanedaw@gmail.com",
-            strftime("Cartas al director del %d/%m/%Y"), "",
-            nombre)
+with open("mails.txt") as f:
+    lista = [m.strip() for m in f.readlines()]
+
+for mail in lista:
+    enviar_mail(mail,
+                strftime("Cartas al director del %d/%m/%Y"), "",
+                nombre)
