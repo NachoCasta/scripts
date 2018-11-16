@@ -23,9 +23,9 @@ for pagina in paginas:
         break
 
 imagen = browser.find(class_="fullImg").get("src-img")
-path = os.path.dirname(os.path.abspath(__file__))
-nombre = path + "\\Cartas.jpg"
-print(nombre)
+path = os.path.dirname(os.path.abspath(__file__)).replace("\\", "/")
+nombre = path + "/Cartas.jpg"
+
 
 r = requests.get(imagen, stream=True,
                  headers={'User-agent': 'Mozilla/5.0'})
@@ -34,7 +34,7 @@ if r.status_code == 200:
         r.raw.decode_content = True
         shutil.copyfileobj(r.raw, f)
 
-with open(path + "\\mails.txt") as f:
+with open(path + "/mails.txt") as f:
     lista = [m.strip() for m in f.readlines()]
 
 for mail in lista:
