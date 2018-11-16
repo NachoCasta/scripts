@@ -1,4 +1,4 @@
-import requests, shutil
+import requests, shutil, os
 from time import strftime
 
 from robobrowser import RoboBrowser
@@ -23,7 +23,9 @@ for pagina in paginas:
         break
 
 imagen = browser.find(class_="fullImg").get("src-img")
-nombre = "Cartas.jpg"
+path = os.path.dirname(os.path.abspath(__file__))
+nombre = path + "\\Cartas.jpg"
+print(nombre)
 
 r = requests.get(imagen, stream=True,
                  headers={'User-agent': 'Mozilla/5.0'})
