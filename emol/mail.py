@@ -1,10 +1,12 @@
-import smtplib, base64
+import smtplib
+import base64
 from os.path import basename
 from email.mime.application import MIMEApplication
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from email.utils import COMMASPACE, formatdate
 import base64
+
 
 def enviar_mail(destinatario, asunto, mensaje, files=None):
     if type(destinatario) != list:
@@ -28,7 +30,7 @@ def enviar_mail(destinatario, asunto, mensaje, files=None):
             part['Content-Disposition'] = (
                 'attachment; filename="%s"' % basename(f))
             msg.attach(part)
-            
+
     fromaddr = "mangadescarga@gmail.com"
     toaddr = destinatario
     username = "mangadescarga@gmail.com"
@@ -36,8 +38,8 @@ def enviar_mail(destinatario, asunto, mensaje, files=None):
     server = smtplib.SMTP("smtp.gmail.com:587")
     server.ehlo()
     server.starttls()
-    server.login(username,password)
-    server.sendmail(fromaddr,toaddr,msg.as_string())
+    server.login(username, password)
+    server.sendmail(fromaddr, toaddr, msg.as_string())
     server.quit()
 
 if __name__ == "__main__":

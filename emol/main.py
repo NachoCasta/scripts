@@ -1,4 +1,6 @@
-import requests, shutil, os
+import requests
+import shutil
+import os
 from time import strftime, sleep
 
 from PIL import Image
@@ -10,6 +12,7 @@ from mail import enviar_mail
 
 browser = RoboBrowser(history=True)
 
+
 def descargar_cartas():
     browser.open('https://digital.elmercurio.com')
     paginas = browser.find_all(class_="item")
@@ -19,7 +22,7 @@ def descargar_cartas():
         if onclick is None:
             continue
         args = [a.strip("'") for a in
-                onclick[onclick.index("(")+1:onclick.index(")")].split(",")]
+                onclick[onclick.index("(") + 1:onclick.index(")")].split(",")]
         letter, _, number = args
         page = letter + number
         if page == "A2":
@@ -39,7 +42,6 @@ def descargar_cartas():
     return nombre
 
 
-
 def descargar_obituarios():
     browser.open('https://digital.elmercurio.com')
     url = browser.url.replace("A", "C")
@@ -52,7 +54,7 @@ def descargar_obituarios():
         if onclick is None:
             continue
         args = [a.strip("'") for a in
-                onclick[onclick.index("(")+1:onclick.index(")")].split(",")]
+                onclick[onclick.index("(") + 1:onclick.index(")")].split(",")]
         letter, _, number = args
         page = letter + number
         links[page] = a
@@ -75,14 +77,16 @@ def descargar_obituarios():
             return nombre
     return None
 
+
 def es_obituario(file):
     img = Image.open(file)
     for i in range(25):
-        cropped = img.crop((160, 100+100*i, 370, 300+100*i))
+        cropped = img.crop((160, 100 + 100 * i, 370, 300 + 100 * i))
         texto = image_to_string(cropped).lower().strip()
         if "obituario" in texto:
             return True
     return False
+
 
 def get_mails(file):
     path = os.path.dirname(os.path.abspath(__file__)).replace("\\", "/")
