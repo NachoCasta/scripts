@@ -11,5 +11,5 @@ print("Preguntas traducidas")
 
 with open("traducidas.txt", "w") as file:
     for i, (p, t) in enumerate(zip(preguntas, traducidas)):
-        file.write("{}. {}\n   ({})\n\n".format(i + 1, p, t))
+        file.write("- [ ] {}. **{}**\n   ({})\n\n".format(i + 1, p, t))
     print("Archivo listo")
