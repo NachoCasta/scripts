@@ -1,0 +1,120 @@
+1. Wie koennen Mitglieder einer Klasse (Ñclass membersì) im Konstruktor initialisiert warden, unabhaengig davon ob diese Mitglieder ueber einen Ñdefault constructorì verfuegen oder nicht?
+   (How can members of a class (class members) be initialized in the constructor, regardless of whether these members have a default constructor or not?)
+
+2. Wie kann man verhindern, daﬂ die vom Compiler generierten Klassenartefakte versehentlich verwendet werden (mit und ohne Verwendung von C++11 Funktionalitaet)?
+   (How can you prevent the compiler-generated class artifacts from being inadvertently used (with and without the use of C ++ 11 functionality)?)
+
+3. Was bedeutet es wenn eine Funktion einer Klasse (Ñmember functionì) als const deklarert worden ist?  Wann sollte man eine Funktion einer Klasse als const deklarieren?
+   (What does it mean when a function of a class ("member function") has been declared const? When should one declare a function of a class as const?)
+
+4. In C++ kann sich const auf unterschiedliche Teile eines Typs beziehen.  Nennen Sie zumindest zwei unterschiedliche Beispiele und erklaeren sie anhand dieser die entsprechende Implikation.
+   (In C ++, const can refer to different parts of a type. Give at least two different examples and explain the corresponding implication.)
+
+5. Erklaeren Sie die Bedeutung des Schluesselwortes constexpr und in welcher Situation dieses sinnvollerweise eingesetzt werden kann.
+   (Explain the meaning of the keyword constexpr and in which situation it can be usefully used.)
+
+6. Erklaeren Sie die Bedeutung des Schluesselwortes inline und wie dieses sinnvollerweise eingesetzt werden kann, insbesondere im Zusammenhang von Projekten, die aus mehreren Objektdateien bestehen (und auch insbesondere wenn Ñlink-time optimizationì nicht zur Verfuegung steht).
+   (Explain the meaning of the keyword inline and how it can be reasonably used, especially in the context of projects that consist of several object files (and especially if "link-time optimization" is not available).)
+
+7. Unter welchen Umstaenden gehoeren templates und als inline deklarierte Funktionen in die Headerdatei (*.h) und unter welchen in die Implementierungsdatei (*.cc)? Erklaeren Sie weshalb.
+   (Under what circumstances do templates and inline declared functions belong in the header file (* .h) and under which in the implementation file (* .cc)? Explain why.)
+
+8. Erklaeren Sie die Bedeutung des Schluesselwortes friend und wo dieses sinnvollerweise eingesetzt werden kann.
+   (Explain the meaning of the keyword friend and where this can be meaningfully used.)
+
+9. Erklaeren Sie den Unterschied zwischen Pointer und Reference. Worauf ist insbesondere bei Objekten, die auf dem Stack liegen aufzupassen?
+   (Explain the difference between Pointer and Reference. What is especially important for watching objects that are on the stack?)
+
+10. Was ist der unterschied zwischen einer virtuellen und nicht virtuellen "member function" (Methode)?  Wozu dient die virtuelle Methodentabelle?
+   (What is the difference between a virtual and a non-virtual "member function" (method)? What is the virtual method table for?)
+
+11. C++ erlaubt es die Operatoren +, -, *, /, etc zu ueberladen.  Worauf sollte man dabei (im Allgemeinen) im Sinne der Lesbarkeit des Programmes aufpassen?
+   (C ++ allows the operators +, -, *, /, etc to be overloaded. What should be taken care of (in general) in terms of the readability of the program?)
+
+12. Was besagt die Ñrule of threeì? Wieso ist sie so wichtig?
+   (What does the "rule of three" mean? Why is she so important?)
+
+13. Wie werden in C++ ueblicherweise benutzerdefinierte Ein- und Ausgaberoutinen implementiert?  Was ist im Fehlerfall zu beachten?
+   (How is custom input and output routines implemented in C ++? What should be considered in case of error?)
+
+14. Wie koennen Sie in C++ einen benutzerdefinierten Konversionsoperator implementieren?
+   (How can you implement a custom conversion operator in C ++?)
+
+15. Welche Arten von Polymorphismus gibt es?
+   (What types of polymorphism exist?)
+
+16. Was passiert in C++ (intern) wenn ein Template mit unterschiedlichen Templateparametern verwendet wird?  Was ist ein Vorteil dieser Implementierung?
+   (What happens in C ++ (internally) when a template with different template parameters is used? What is an advantage of this implementation?)
+
+17. Erklaeren Sie die Funktion von C++ Iteratoren?  Wie werden diese verwendet?  Was sind deren Eigenschaften?
+   (Explain the function of C ++ iterators? How are these used? What are their properties?)
+
+18. Was ist eine trait Klasse.
+   (What is a trait class.)
+
+19. Vergleichen Sie eine trait Klasse mit einer puren virtuellen Klasse (Ñinterfaceì).
+   (Compare a trait class with a pure virtual class ("interface").)
+
+20. Weshalb werden in C++ (wie auch in C) Headerdateien (*.h) benoetigt? Welche Artifakte gehoeren daher prinzipiell in die Headerdatei?
+   (Why are header files (* .h) required in C ++ (as well as in C)? Which artifacts are therefore part of the header file?)
+
+21. Wozu wird der move constructor verwendet?
+   (What is the move constructor used for?)
+
+22. Erklaeren Sie das Ñcopy and swapì Idiom. Was sind dessen Vorteile?
+   (Explain the "copy and swap" idiom. What are its advantages?)
+
+23. Was ist ein function object?  Wie kann dieses sinnvoll verwendet werden? Was ist eine lambda function? Wie unterscheidet sich diese von einem function object?
+   (What is a function object? How can this be used meaningfully? What is a lambda function? How does this differ from a function object?)
+
+24. C++ erlaubt es statisch anhand von Typdefinitionen eines template parameters unterschiedliche Implementierungen einer Funktion auszuwaehlen (tag dispatching).  Erklaeren Sie den Mechanismus anhand eines Beispiels.
+   (C ++ allows the static selection of different implementations of a function based on type definitions of a template parameter (tag dispatching). Explain the mechanism with an example.)
+
+25. C++ erlaubt es statisch mittels SFINAE (Substitution Failure Is Not An Error) anahnd von Eigenschaften eines templates unterschiedliche Implementierungen einer Funktion auszuwaehlen).  Erklaeren Sie die Funktionsweise.
+   (C ++ allows you to statically select different implementations of a function using SFINAE (Substitution Failure Is Not An Error). Explain how it works.)
+
+26. Erklaeren Sie den unterschied zwischen Ñclass Sub : [public, protected, private] Baseì?  Was sind die Implikationen, insbesondere auch auf die Vererbung des Types der Basisklasse.
+   (Explain the difference between "class Sub: [public, protected, private] Base"? What are the implications, especially on the inheritance of the type of the base class.)
+
+27. Im Falle von Inheritance kann es zu slicing kommen?  Was ist dies und in welcher Situation tritt dieses Phaenomen?
+   (Inheritance can lead to slicing? What is this and in which situation does this phenomenon occur?)
+
+28. Erklaeren sie den Begriff binding im Zusammenhang mit inheritance.
+   (Explain the term binding in the context of inheritance.)
+
+29. Erklaeren Sie die unterschliedlichen Arten von casts in C++.
+   (Explain the different types of casts in C ++.)
+
+30. Erklaeren Sie das Liskov Substitution Principle.
+   (Explain the Liskov Substitution Principle.)
+
+31. Wie funktioniert exception discrimination in C++?
+   (How does exception discrimination work in C ++?)
+
+32. C++ verfuegt im Gegensatz zu anderen Programmiersprachen ueber kein finally Schluesselwort.  Wieso ist dieses in C++ nicht notwendig?  Erklaeren Sie Ihre Antwort anhand eines Beispiels.
+   (Unlike other programming languages, C ++ does not have a finally keyword. Why is this not necessary in C ++? Explain your answer with an example.)
+
+33. Erklaeren Sie Komplexitaetsgarantien der C++ Container vector, map, set, list in Bezug auf Einfuegen und den Zugriff auf einzelene Objekte (jeweils am Anfang, am Ende, beziehungsweise an einer bestimmten anderen Position).
+   (Explain complexity guarantees of the C ++ containers vector, map, set, list in terms of inserting and accessing individual objects (at the beginning, at the end, or at a certain other position).)
+
+34. Welche Routine bzw. Routinen werden am Anfang eines jeden C++ Programmes ausgefuehrt?
+   (Which routine or routines are executed at the beginning of every C ++ program?)
+
+35. Wozu dient static_assert?  Erklaeren Sie anhand eines Beispiels in welchem Zusammenhang es sinnvoll ist.
+   (What is static_assert for? Explain by way of example in what context it makes sense.)
+
+36. C++ verfuegt seit C++11 ueber initializer lists.  Wozu dienen diese?  Wie werden Sie in der Standard Library verwendet?  Wie kann man diese selber verwenden?
+   (C ++ has been using C ++ 11 via initializer lists. What are these for? How are you used in the standard library? How can you use it yourself?)
+
+37. Erklaeren Sie wozu die Schluesselwoerter auto, decltype dienen.
+   (Explain what the keywords auto, decltype are for.)
+
+38. Wie kann seit C++11 ein thread gestartet werden und wie kann man anschliessend auf dessen Beendigung warten?
+   (How can a thread be started since C ++ 11 and how can you wait for it to finish?)
+
+39. Was sind variadic templates?  Wo finden diese in C++ Verwendung?
+   (What are variadic templates? Where do these find use in C ++?)
+
+40. Welche Eigenschaften haben Ñtemplatesì und Ñinheritanceì gemein? Was ist ein fundamentaler (der fundamentale) Unterschied dieser beiden Mechanismen.
+   (What properties do "templates" and "inheritance" have in common? What is a fundamental (the fundamental) difference between these two mechanisms?)
+

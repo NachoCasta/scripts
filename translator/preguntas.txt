@@ -1,0 +1,40 @@
+1.	Wie koennen Mitglieder einer Klasse (Ñclass membersì) im Konstruktor initialisiert warden, unabhaengig davon ob diese Mitglieder ueber einen Ñdefault constructorì verfuegen oder nicht?
+2.	Wie kann man verhindern, daﬂ die vom Compiler generierten Klassenartefakte versehentlich verwendet werden (mit und ohne Verwendung von C++11 Funktionalitaet)?
+3.	Was bedeutet es wenn eine Funktion einer Klasse (Ñmember functionì) als const deklarert worden ist?  Wann sollte man eine Funktion einer Klasse als const deklarieren?
+4.	In C++ kann sich const auf unterschiedliche Teile eines Typs beziehen.  Nennen Sie zumindest zwei unterschiedliche Beispiele und erklaeren sie anhand dieser die entsprechende Implikation.
+5.	Erklaeren Sie die Bedeutung des Schluesselwortes constexpr und in welcher Situation dieses sinnvollerweise eingesetzt werden kann.
+6.	Erklaeren Sie die Bedeutung des Schluesselwortes inline und wie dieses sinnvollerweise eingesetzt werden kann, insbesondere im Zusammenhang von Projekten, die aus mehreren Objektdateien bestehen (und auch insbesondere wenn Ñlink-time optimizationì nicht zur Verfuegung steht).
+7.	Unter welchen Umstaenden gehoeren templates und als inline deklarierte Funktionen in die Headerdatei (*.h) und unter welchen in die Implementierungsdatei (*.cc)? Erklaeren Sie weshalb.
+8.	Erklaeren Sie die Bedeutung des Schluesselwortes friend und wo dieses sinnvollerweise eingesetzt werden kann. 
+9.	Erklaeren Sie den Unterschied zwischen Pointer und Reference. Worauf ist insbesondere bei Objekten, die auf dem Stack liegen aufzupassen?
+10.	Was ist der unterschied zwischen einer virtuellen und nicht virtuellen "member function" (Methode)?  Wozu dient die virtuelle Methodentabelle?
+11.	C++ erlaubt es die Operatoren +, -, *, /, etc zu ueberladen.  Worauf sollte man dabei (im Allgemeinen) im Sinne der Lesbarkeit des Programmes aufpassen?
+12.	Was besagt die Ñrule of threeì? Wieso ist sie so wichtig?
+13.	Wie werden in C++ ueblicherweise benutzerdefinierte Ein- und Ausgaberoutinen implementiert?  Was ist im Fehlerfall zu beachten?
+14.	Wie koennen Sie in C++ einen benutzerdefinierten Konversionsoperator implementieren?
+15.	Welche Arten von Polymorphismus gibt es?
+16.	Was passiert in C++ (intern) wenn ein Template mit unterschiedlichen Templateparametern verwendet wird?  Was ist ein Vorteil dieser Implementierung?
+17.	Erklaeren Sie die Funktion von C++ Iteratoren?  Wie werden diese verwendet?  Was sind deren Eigenschaften?
+18.	Was ist eine trait Klasse.
+19.	Vergleichen Sie eine trait Klasse mit einer puren virtuellen Klasse (Ñinterfaceì).
+20.	Weshalb werden in C++ (wie auch in C) Headerdateien (*.h) benoetigt? Welche Artifakte gehoeren daher prinzipiell in die Headerdatei?
+21.	Wozu wird der move constructor verwendet?
+22.	Erklaeren Sie das Ñcopy and swapì Idiom. Was sind dessen Vorteile?
+23.	Was ist ein function object?  Wie kann dieses sinnvoll verwendet werden? Was ist eine lambda function? Wie unterscheidet sich diese von einem function object?
+24.	C++ erlaubt es statisch anhand von Typdefinitionen eines template parameters unterschiedliche Implementierungen einer Funktion auszuwaehlen (tag dispatching).  Erklaeren Sie den Mechanismus anhand eines Beispiels.
+25.	C++ erlaubt es statisch mittels SFINAE (Substitution Failure Is Not An Error) anahnd von Eigenschaften eines templates unterschiedliche Implementierungen einer Funktion auszuwaehlen).  Erklaeren Sie die Funktionsweise.
+26.	Erklaeren Sie den unterschied zwischen Ñclass Sub : [public, protected, private] Baseì?  Was sind die Implikationen, insbesondere auch auf die Vererbung des Types der Basisklasse.
+27.	Im Falle von Inheritance kann es zu slicing kommen?  Was ist dies und in welcher Situation tritt dieses Phaenomen?
+28.	Erklaeren sie den Begriff binding im Zusammenhang mit inheritance.
+29.	Erklaeren Sie die unterschliedlichen Arten von casts in C++.
+30.	Erklaeren Sie das Liskov Substitution Principle.
+31.	Wie funktioniert exception discrimination in C++?
+32.	C++ verfuegt im Gegensatz zu anderen Programmiersprachen ueber kein finally Schluesselwort.  Wieso ist dieses in C++ nicht notwendig?  Erklaeren Sie Ihre Antwort anhand eines Beispiels.
+33.	Erklaeren Sie Komplexitaetsgarantien der C++ Container vector, map, set, list in Bezug auf Einfuegen und den Zugriff auf einzelene Objekte (jeweils am Anfang, am Ende, beziehungsweise an einer bestimmten anderen Position).
+34.	Welche Routine bzw. Routinen werden am Anfang eines jeden C++ Programmes ausgefuehrt?
+35.	Wozu dient static_assert?  Erklaeren Sie anhand eines Beispiels in welchem Zusammenhang es sinnvoll ist.
+36.	C++ verfuegt seit C++11 ueber initializer lists.  Wozu dienen diese?  Wie werden Sie in der Standard Library verwendet?  Wie kann man diese selber verwenden?
+37.	Erklaeren Sie wozu die Schluesselwoerter auto, decltype dienen.
+38.	Wie kann seit C++11 ein thread gestartet werden und wie kann man anschliessend auf dessen Beendigung warten?
+39.	Was sind variadic templates?  Wo finden diese in C++ Verwendung?
+40.	Welche Eigenschaften haben Ñtemplatesì und Ñinheritanceì gemein? Was ist ein fundamentaler (der fundamentale) Unterschied dieser beiden Mechanismen.
