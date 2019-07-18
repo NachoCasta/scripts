@@ -29,19 +29,19 @@
    (What is the difference between a virtual and a non-virtual "member function" (method)? What is the virtual method table for?)
 
 - [ ] 11. **C++ erlaubt es die Operatoren +, -, *, /, etc zu ueberladen.  Worauf sollte man dabei (im Allgemeinen) im Sinne der Lesbarkeit des Programmes aufpassen?**
-   (C ++ allows the operators +, -, *, /, etc to be overloaded. What should be taken care of (in general) in terms of the readability of the program?)
+   (C ++ allows the operators +, -, *, /, etc to be overloaded. What should one take care of (in general) in terms of the readability of the program?)
 
 - [ ] 12. **Was besagt die „rule of three“? Wieso ist sie so wichtig?**
    (What does the "rule of three" mean? Why is she so important?)
 
 - [ ] 13. **Wie werden in C++ ueblicherweise benutzerdefinierte Ein- und Ausgaberoutinen implementiert?  Was ist im Fehlerfall zu beachten?**
-   (How is custom input and output routines implemented in C ++? What should be considered in case of error?)
+   (How do you implement custom input and output routines in C ++? What should be considered in case of error?)
 
 - [ ] 14. **Wie koennen Sie in C++ einen benutzerdefinierten Konversionsoperator implementieren?**
    (How can you implement a custom conversion operator in C ++?)
 
 - [ ] 15. **Welche Arten von Polymorphismus gibt es?**
-   (What types of polymorphism exist?)
+   (What types of polymorphism are there?)
 
 - [ ] 16. **Was passiert in C++ (intern) wenn ein Template mit unterschiedlichen Templateparametern verwendet wird?  Was ist ein Vorteil dieser Implementierung?**
    (What happens in C ++ (internally) when a template with different template parameters is used? What is an advantage of this implementation?)
@@ -62,13 +62,13 @@
    (What is the move constructor used for?)
 
 - [ ] 22. **Erklaeren Sie das „copy and swap“ Idiom. Was sind dessen Vorteile?**
-   (Explain the "copy and swap" idiom. What are its advantages?)
+   (Explain the "copy and swap" idiom. What are their advantages?)
 
 - [ ] 23. **Was ist ein function object?  Wie kann dieses sinnvoll verwendet werden? Was ist eine lambda function? Wie unterscheidet sich diese von einem function object?**
    (What is a function object? How can this be used meaningfully? What is a lambda function? How does this differ from a function object?)
 
 - [ ] 24. **C++ erlaubt es statisch anhand von Typdefinitionen eines template parameters unterschiedliche Implementierungen einer Funktion auszuwaehlen (tag dispatching).  Erklaeren Sie den Mechanismus anhand eines Beispiels.**
-   (C ++ allows the static selection of different implementations of a function based on type definitions of a template parameter (tag dispatching). Explain the mechanism with an example.)
+   (C ++ allows statically to select different implementations of a function based on type definitions of a template parameter (day dispatching). Explain the mechanism with an example.)
 
 - [ ] 25. **C++ erlaubt es statisch mittels SFINAE (Substitution Failure Is Not An Error) anahnd von Eigenschaften eines templates unterschiedliche Implementierungen einer Funktion auszuwaehlen).  Erklaeren Sie die Funktionsweise.**
    (C ++ allows you to statically select different implementations of a function using SFINAE (Substitution Failure Is Not An Error). Explain how it works.)
@@ -101,7 +101,7 @@
    (Which routine or routines are executed at the beginning of every C ++ program?)
 
 - [ ] 35. **Wozu dient static_assert?  Erklaeren Sie anhand eines Beispiels in welchem Zusammenhang es sinnvoll ist.**
-   (What is static_assert for? Explain by way of example in what context it makes sense.)
+   (What is static_assert for? Explain how it makes sense to use an example.)
 
 - [ ] 36. **C++ verfuegt seit C++11 ueber initializer lists.  Wozu dienen diese?  Wie werden Sie in der Standard Library verwendet?  Wie kann man diese selber verwenden?**
    (C ++ has been using C ++ 11 via initializer lists. What are these for? How are you used in the standard library? How can you use it yourself?)
