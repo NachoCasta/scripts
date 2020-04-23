@@ -22,6 +22,8 @@ VALUE_INPUT_OPTION = "USER_ENTERED"
 DOWNLOAD_PATH = "downloads"
 DRIVE_PATH = '/Volumes/GoogleDrive/Mi unidad/Entretenimiento/Peliculas'
 
+MAX_CONCURRENT_DOWNLOADS = 5
+
 
 class Movie:
     def __init__(self, name, year):
@@ -200,12 +202,18 @@ class AutoTorrent:
             valueInputOption=VALUE_INPUT_OPTION,
             body=body).execute()
 
+    def should_download(self):
+        current_torrents = len(self.qb.torrents(filter="downloading"))
+        less_than_max = current_torrents < MAX_CONCURRENT_DOWNLOADS
+        just_started = len(self.downloading) < MAX_CONCURRENT_DOWNLOADS
+        return less_than_max or just_started
+
     def start(self):
         movies = self.get_movies()
         while True:
             sleep(1)
             self.clean_torrents()
-            if len(self.qb.torrents(filter="downloading")) >= 5:
+            if not self.should_download():
                 continue
             movie = next(movies)
             print(movie)
@@ -215,10 +223,10 @@ class AutoTorrent:
         timed_out = []
         done = []
         for torrent in self.qb.torrents():
-            if torrent["time_active"] > 300 and torrent["eta"] >= 10000 and torrent["progress"] < 0.1:
-                timed_out.append(torrent["hash"])
             if torrent["progress"] == 1:
                 done.append(torrent["hash"])
+            elif is_timed_out(torrent):
+                timed_out.append(torrent["hash"])
         for h in timed_out:
             if h not in self.downloading:
                 continue
@@ -252,6 +260,22 @@ def normalize(s):
     for c in remove:
         s = s.replace(c, "")
     return s.strip()
+
+
+# Constants for is_timed_out
+SLOW_TIMEOUT = 300
+SLOW_ETA = 2 * 60 * 60
+SLOW_PROGRESS = 0.1
+MAX_TIME = 5 * 60 * 60
+
+
+def is_timed_out(torrent):
+    time_active = torrent["time_active"]
+    eta = torrent["eta"]
+    progress = torrent["progress"]
+    too_slow = time_active >= SLOW_TIMEOUT and eta >= SLOW_ETA and progress <= SLOW_PROGRESS
+    got_stuck = time_active >= MAX_TIME
+    return too_slow or got_stuck
 
 
 def main():
