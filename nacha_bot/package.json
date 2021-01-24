@@ -1,0 +1,10 @@
+{
+  "name": "nacha_bot",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "instauto": "^7.1.1",
+    "puppeteer": "^5.5.0"
+  }
+}
