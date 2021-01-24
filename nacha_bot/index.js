@@ -21,8 +21,8 @@ const RANDOM_FOLLOWS_PER_HOUR = Math.floor(
 const FOLLOWS_PER_DAY = 100;
 const RANDOM_FOLLOWS_PER_DAY = Math.floor(Math.random() * 10 + FOLLOWS_PER_DAY);
 
-console.log("Follows per day:", FOLLOWS_PER_DAY);
-console.log("Follows per hour:", FOLLOWS_PER_HOUR);
+console.log("Follows per day:", RANDOM_FOLLOWS_PER_DAY);
+console.log("Follows per hour:", RANDOM_FOLLOWS_PER_HOUR);
 
 const options = {
     cookiesPath: path.join(LOGS, "./cookies.json"),
