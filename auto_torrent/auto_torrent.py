@@ -79,22 +79,16 @@ class Movie:
                     shutil.rmtree('{}/{}'.format(self.local_path, f))
 
     def delete_folder(self):
-        try:
-            os.rmdir(self.local_path)
-        except Exception:
-            pass
+        shutil.rmtree(self.local_path)
 
     def move_to_drive(self):
-        drive_folder_path = "{}/{}".format(DRIVE_PATH, self)
+        drive_folder_path = "{}/{}".format(DRIVE_PATH, normalize(str(self)))
         if os.path.isdir(drive_folder_path):
             for f in os.listdir(self.local_path):
                 file_path = "{}/{}".format(self.local_path, f)
                 if not os.path.isfile("{}/{}".format(drive_folder_path, f)):
                     shutil.move(file_path, drive_folder_path)
-            try:
-                os.rmdir(self.local_path)
-            except Exception:
-                pass
+            self.delete_folder()
         else:
             shutil.move(self.local_path, DRIVE_PATH)
 
