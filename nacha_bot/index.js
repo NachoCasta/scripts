@@ -1,16 +1,15 @@
 "use strict";
-
-require("dotenv").config();
-
 const path = require("path");
+
+const ROOT = path.dirname(require.main.filename);
+
+require("dotenv").config({ path: path.join(ROOT, ".env") });
 
 const puppeteer = require("puppeteer"); // eslint-disable-line import/no-extraneous-dependencies
 
 const Instauto = require("instauto"); // eslint-disable-line import/no-unresolved
 
 const DAYS_UNTIL_UNFOLLOW = 2;
-
-const ROOT = path.dirname(require.main.filename);
 
 const LOGS = path.join(ROOT, "logs");
 
