@@ -21,6 +21,9 @@ const RANDOM_FOLLOWS_PER_HOUR = Math.floor(
 const FOLLOWS_PER_DAY = 100;
 const RANDOM_FOLLOWS_PER_DAY = Math.floor(Math.random() * 10 + FOLLOWS_PER_DAY);
 
+console.log("Follows per day:", FOLLOWS_PER_DAY);
+console.log("Follows per hour:", FOLLOWS_PER_HOUR);
+
 const options = {
     cookiesPath: path.join(LOGS, "./cookies.json"),
     username: process.env.USERNAME,
@@ -31,7 +34,7 @@ const options = {
     followUserRatioMax: null,
     dontUnfollowUntilTimeElapsed: DAYS_UNTIL_UNFOLLOW * 24 * 60 * 60 * 1000,
     // If true, will not do any actions (defaults to true)
-    dryRun: false,
+    dryRun: !RASPBERRY_PI,
 };
 
 (async () => {
