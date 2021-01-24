@@ -10,7 +10,7 @@ insta_password = ''
 # set headless_browser=True to run InstaPy in the background
 session = InstaPy(username=insta_username,
                   password=insta_password,
-                  headless_browser=False)
+                  headless_browser=True)
 
 accounts = ["chelcy.cl", "cmoran_shoes", "luau_shoes", "chinitascl", "zapatosmandalas",
             "estelazapatos", "fessiazapatos", "grossa.cl", "becca.shoesok", "rameshoes.cl", "shoes_divino"]
