@@ -14,11 +14,11 @@ const LOGS = path.join(ROOT, "logs");
 const RASPBERRY_PI = process.env.RASPBERRY_PI === "true";
 
 const DAYS_UNTIL_UNFOLLOW = 2;
-const FOLLOWS_PER_HOUR = 20;
+const FOLLOWS_PER_HOUR = 30;
 const RANDOM_FOLLOWS_PER_HOUR = Math.floor(
     Math.random() * 4 - 2 + FOLLOWS_PER_HOUR
 );
-const FOLLOWS_PER_DAY = 120;
+const FOLLOWS_PER_DAY = 200;
 const RANDOM_FOLLOWS_PER_DAY = Math.floor(
     Math.random() * 20 - 10 + FOLLOWS_PER_DAY
 );
