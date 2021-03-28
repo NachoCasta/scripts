@@ -61,17 +61,16 @@ const options = {
         const instauto = await Instauto(instautoDb, browser, options);
 
         const usersToFollowFollowersOf = [
-            "chelcy.cl",
-            "cmoran_shoes",
-            "luau_shoes",
-            "chinitascl",
-            "zapatosmandalas",
-            "estelazapatos",
-            "fessiazapatos",
-            "grossa.cl",
-            "becca.shoesok",
-            "rameshoes.cl",
-            "shoes_divino",
+            "clinicaeverest",
+            "sutilwines",
+            "southfisher_chile",
+            "rappichile",
+            "cornershopcl",
+            "vitacura_",
+            "mlobarnechea",
+            "muni_lascondes",
+            "muninunoa",
+            "greenglasschile"
         ];
 
         await instauto.followUsersFollowers({
